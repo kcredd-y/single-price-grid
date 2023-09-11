@@ -188,8 +188,6 @@ body {
   }
 }
 
-
-
 @media screen and (min-width: 1440px) {
   body {
     display: flex;
@@ -235,10 +233,8 @@ body {
   }
 }
 
-@media screen and (min-width:1800px) {
-
-    body{
-        margin: 15rem 35rem;
-
-    }
+@media screen and (min-width: 1800px) {
+  body {
+    margin: 15rem 35rem;
+  }
 }
