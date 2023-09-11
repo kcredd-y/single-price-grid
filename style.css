@@ -1,0 +1,244 @@
+:root {
+  --clr-primary-cyan: hsl(179, 62%, 43%);
+
+  --clr-primary-yellow: hsl(71, 73%, 54%);
+
+  --clr-neutral-gray: hsl(204, 43%, 93%);
+  --clr-neutral-blue: hsl(218, 22%, 67%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --ff: "Karla", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  margin: 4.6875rem 1.5625rem;
+  background-color: var(--clr-neutral-gray);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.product {
+  color: var(--clr-neutral-blue);
+  background-color: white;
+  padding: 1.5625rem 1.875rem;
+}
+
+.product__heading {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-cyan);
+}
+
+.product__slogon {
+  margin-top: 1.2rem;
+  letter-spacing: -1px;
+  line-height: normal;
+  font-size: 1rem;
+  color: var(--clr-primary-yellow);
+}
+.product__details {
+  margin-top: 1.2rem;
+  line-height: 1.8;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.subscription {
+  background-color: hsla(179, 62%, 43%, 1);
+  padding: 1.5625rem 1.875rem;
+  color: white;
+}
+
+.subscription__heading {
+  font-size: 1.1rem;
+}
+
+.subscription__price {
+  margin-top: 0.5rem;
+  color: var(--clr-neutral-gray);
+}
+.subscription__price span {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.subscription__price span:last-child {
+  font-size: initial;
+  opacity: 0.5;
+
+  font-weight: 100;
+}
+.subscription__details {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-weight: var(--fw-regular);
+}
+
+.btn {
+  margin-top: 1.8rem;
+  width: 100%;
+  height: 2.8125rem;
+  border: none;
+  color: var(--clr-neutral-gray);
+  background-color: var(--clr-primary-yellow);
+  border-radius: 0.3rem;
+}
+
+.Reasons {
+  padding: 1rem 1.5rem;
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: hsla(179, 62%, 43%, 0.8);
+}
+
+.Reasons__heading {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  color: hsl(204, 43%, 93%);
+}
+
+.Reasons ul {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.Reasons li {
+  list-style: none;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  margin-left: -2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 6rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 8rem 16rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product {
+    grid-column: 1 / span 2;
+  }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 25rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product {
+    grid-column: 1 / span 2;
+    padding: 2.8125rem 3.125rem;
+  }
+
+  .product__heading {
+    font-size: 1.5rem;
+  }
+  .product__slogon {
+    font-size: 1.25rem;
+  }
+
+  .product__details {
+    font-size: 1rem;
+    margin-top: 0.7rem;
+  }
+
+  .subscription {
+    padding: 2.8125rem 3.125rem;
+  }
+  .subscription__details {
+    font-size: 0.9rem;
+  }
+
+  .Reasons {
+    padding: 2.8125rem 2.5rem;
+  }
+  .Reasons li {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width:1800px) {
+
+    body{
+        margin: 15rem 35rem;
+
+    }
+}
